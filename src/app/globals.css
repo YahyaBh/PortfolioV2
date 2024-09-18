@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Canvas';
+  src: url('../public/fonts/CanvasRegular.otf');
+}
+
+
+@font-face {
+  font-family: 'CanvasBlack';
+  src: url('../public/fonts/CanvasBlack.otf');
+}
+
+@font-face {
+  font-family: 'CanvasLight';
+  src: url('../public/fonts/CanvasLight.otf');
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Canvas', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
